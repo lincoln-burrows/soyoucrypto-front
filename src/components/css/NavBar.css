@@ -1,0 +1,49 @@
+.navBar{
+  position:relative;
+  display: flex;
+  font-family: 'noto-sans-kr-regular';
+  /* font */
+  color: #A6A6A6;
+  text-align: center;
+  font-size: 15px;
+  /* padding-bottom: 10px; */
+  /* border: 1px solid gray; */
+  /* top: -30px; */
+}
+
+.navMain {
+flex-grow:1;
+
+}
+
+.navMain:hover {
+  color: #000000;
+  cursor: pointer;
+  }
+
+.navMomentum {
+  flex-grow:1;
+}
+
+.navMomentum:hover {
+  color: #000000;
+  cursor: pointer;
+  }
+
+.navStable {
+  flex-grow:1;
+}
+
+.navStable:hover {
+  color: #000000;
+  cursor: pointer;
+  }
+
+.navContact {
+  flex-grow:1;
+}
+
+.navContact:hover {
+  color: #000000;
+  cursor: pointer;
+  }

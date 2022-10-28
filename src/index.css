@@ -1,13 +1,64 @@
+@font-face {
+  font-family: 'noto-sans-kr-regular';
+  src: url('https://cdn.jsdelivr.net/npm/noto-sans-kr-font@0.0.6/fonts/NotoSansKR-Regular.woff2') format('woff2');
+  src: url('https://cdn.jsdelivr.net/npm/noto-sans-kr-font@0.0.6/fonts/NotoSansKR-Regular.woff') format('woff'),
+      url('https://cdn.jsdelivr.net/npm/noto-sans-kr-font@0.0.6/fonts/NotoSansKR-Regular.eot'),    
+      url('https://cdn.jsdelivr.net/npm/noto-sans-kr-font@0.0.6/fonts/NotoSansKR-Regular.eot?#iefix') format('embedded-opentype'),
+      url('https://cdn.jsdelivr.net/npm/@moment1/noto-sans-kr@1.0.1/fonts/NotoSansKR-Regular.otf') format('off'),
+      url('https://cdn.jsdelivr.net/npm/@expo-google-fonts/noto-sans-kr@0.2.2/NotoSansKR_400Regular.ttf') format('ttf');
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'noto-sans-kr-bold';
+  src: url('https://cdn.jsdelivr.net/npm/noto-sans-kr-font@0.0.6/fonts/NotoSansKR-Bold.woff2') format('woff2');
+  src: url('https://cdn.jsdelivr.net/npm/noto-sans-kr-font@0.0.6/fonts/NotoSansKR-Bold.woff') format('woff'),
+      url('https://cdn.jsdelivr.net/npm/noto-sans-kr-font@0.0.6/fonts/NotoSansKR-Bold.eot'),    
+      url('https://cdn.jsdelivr.net/npm/noto-sans-kr-font@0.0.6/fonts/NotoSansKR-Bold.eot?#iefix') format('embedded-opentype'),
+      url('https://cdn.jsdelivr.net/npm/@moment1/noto-sans-kr@1.0.1/fonts/NotoSansKR-Bold.otf') format('otf'),
+      url('https://cdn.jsdelivr.net/npm/@expo-google-fonts/noto-sans-kr@0.2.2/NotoSansKR_700Bold.ttf') format('ttf');
+  font-style: normal;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: 'noto-sans-kr-medium';
+  src: url('https://cdn.jsdelivr.net/npm/noto-sans-kr-font@0.0.6/fonts/NotoSansKR-Medium.woff2') format('woff2');
+  src: url('https://cdn.jsdelivr.net/npm/noto-sans-kr-font@0.0.6/fonts/NotoSansKR-Medium.woff') format('woff'),
+      url('https://cdn.jsdelivr.net/npm/noto-sans-kr-font@0.0.6/fonts/NotoSansKR-Medium.eot'),    
+      url('https://cdn.jsdelivr.net/npm/noto-sans-kr-font@0.0.6/fonts/NotoSansKR-Medium.eot?#iefix') format('embedded-opentype'),
+      url('https://cdn.jsdelivr.net/npm/@moment1/noto-sans-kr@1.0.1/fonts/NotoSansKR-Medium.otf') format('off'),
+      url('https://cdn.jsdelivr.net/npm/@expo-google-fonts/noto-sans-kr@0.2.2/NotoSansKR_500Medium.ttf') format('ttf');
+  font-style: normal;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: 'noto-sans-kr-light';
+  src: url('https://cdn.jsdelivr.net/npm/noto-sans-kr-font@0.0.6/fonts/NotoSansKR-Light.woff2') format('woff2');
+  src: url('https://cdn.jsdelivr.net/npm/noto-sans-kr-font@0.0.6/fonts/NotoSansKR-Light.woff') format('woff'),
+      url('https://cdn.jsdelivr.net/npm/noto-sans-kr-font@0.0.6/fonts/NotoSansKR-Light.eot'),    
+      url('https://cdn.jsdelivr.net/npm/noto-sans-kr-font@0.0.6/fonts/NotoSansKR-Light.eot?#iefix') format('embedded-opentype'),
+      url('https://cdn.jsdelivr.net/npm/@moment1/noto-sans-kr@1.0.1/fonts/NotoSansKR-Light.otf') format('otf'),
+      url('https://cdn.jsdelivr.net/npm/@expo-google-fonts/noto-sans-kr@0.2.2/NotoSansKR_300Light.ttf') format('ttf');
+  font-style: normal;
+  font-display: swap;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'noto-sans-kr';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: 'noto-sans-kr';
+}
+
+.outer{
+  font-family: 'noto-sans-kr';
 }

@@ -1,0 +1,117 @@
+/* .modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 99;
+  background-color: rgba(300, 10, 0, 0.6);
+  animation: modal-bg-hide 1s;
+} */
+.modal button {
+  outline: none;
+  cursor: pointer;
+  border: 0;
+}
+
+.togglePage2.openModal {
+  display: flex;
+  /* align-items: center; */
+  /* 팝업이 열릴때 스르륵 열리는 효과 */
+  animation: modal-bg-show 1s;
+}
+
+.togglePage2.openModal.closing {
+  animation: modal-bg-hide 0.5s;
+}
+
+.hideComponents {
+  display: none;
+}
+
+@keyframes modal-bg-show {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes modal-bg-hide {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.toggleMenu{
+  float:right;
+  text-align: right;
+  font-weight: bold;
+  
+}
+
+.togglePage2 {
+  display: none;
+  position:fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 100vh;
+  /* width:100vw; */
+  /* display: flex; */
+  /* 상하 위치 */
+  /* align-items : flex-end;  */
+  /* font-size: 100px;*/
+  color : white;
+  /* background-color: rgb(34, 32, 32); */
+  background-color: #000000;
+  /* padding-left: 55%;
+  padding-top: 20%;
+  text-align: right;  */
+  z-index: 99;
+  animation: modal-bg-hide 1s;
+}
+
+.modalHeader {
+  height: 0px;
+}
+
+.containerHG2 {
+  width: 100vw;
+  height: 100vh;
+}
+
+.content item {
+  /* border: 1px solid gray; */
+  flex: 18;
+  flex-shrink: 0;
+  /* width: 982px; */
+  align-items: flex-end;
+  padding-top: 15%;
+  position: relative;
+  right: -4%;
+  line-height: 90px;
+}
+
+@media (max-width:1023px) {
+  .content item { 
+  padding-top: 20%;
+  right: 0;
+}
+}
+
+@media (max-height:460px) {
+  .content item { 
+  padding-top: 0px;
+  right: 4%;
+  
+}
+
+
+}

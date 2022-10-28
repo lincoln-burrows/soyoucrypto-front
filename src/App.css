@@ -1,38 +1,124 @@
-.App {
-  text-align: center;
+
+
+/* 화면에서 스크롤바 안보이게 */
+/* .outer::-webkit-scrollbar {
+  display: none;
+} */
+
+
+.divider {
+  width: 100%;
+  height: 5px;
+  background-color: #ffffff;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.divider2 {
+  width: 100%;
+  height: 5px;
+  background-color: #000000;
+  position: fixed;
+  top: 50%;
+  z-index: 2;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+
+.toggleMenu{
+  float:right;
+  text-align: right;
+  font-weight: bold;
+  z-index: 1;
+  
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
+/* 공통 레이아웃 */
+.containerHG{
+  display:flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  /* height:865px; */
+  width: 100%;
+  overflow-x:hidden; 
 }
 
-.App-link {
-  color: #61dafb;
+header{
+  /* border: 1px solid gray; */
+  /* height: 13.16vh; */
+  height: 90px;
+  align-self: center;
+  
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+footer {
+  /* border:1px solid gray; */
+  /* height: 13.16vh; */
+  height: 150px;
+  align-self: center;
 }
+
+.downwardArrow {
+  position:relative;
+  bottom:-30px;
+}
+
+.content {
+  display: flex;
+  height:570px;
+  /* height:5000px; */
+  
+}
+
+.content nav {
+  /* border:1px solid gray;   */
+  /* flex: 2.435; */
+  flex-shrink: 1;
+  /* flex-basis:8px; */
+  /* flex-grow: 1; */
+  width: 8px;
+  /* width: 108px; */
+}
+
+.content aside {
+  /* border:1px solid gray;   */
+  /* flex: 5.5; */
+  flex-shrink: 1;
+  /* flex-basis:8px; */
+  width: 8px;
+  /* width: 300px; */
+  /* flex-grow: 1; */
+}
+
+nav, aside {
+  /* flex-basis: 150px; */
+  /* flex-shrink: 1; */
+}
+
+.content main {
+  /* border: 1px solid gray; */
+  /* flex: 18; */
+  flex-shrink:0;
+  flex-basis: 328px;
+  /* width: 328px; */
+  flex-grow: 1;
+  align-items: flex-start;
+}
+/* 공통 레이아웃 종료 */
+
+@media (min-width: 650px) {
+.content main {
+  flex-basis: 600px;
+  flex-grow: 0;
+}
+
+.content nav {
+  flex-shrink: 1;
+  flex-basis:8px;
+  flex-grow: 1;
+}
+
+.content aside {
+  flex-shrink: 1;
+  flex-basis:8px;
+  flex-grow: 1;
+}
+}
+

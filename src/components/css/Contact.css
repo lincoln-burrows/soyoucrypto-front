@@ -1,0 +1,167 @@
+
+  .contactTitle {
+    font-size: 19px;
+    line-height:35px;
+    padding-bottom:140px;
+    text-align: center;
+  }
+  
+  .contactSubTitle {
+    text-align: center;
+    font-family: 'noto-sans-kr-bold';
+    font-size: 24px;
+    /* width: 90vw; */
+    word-break: break-all;
+  }
+  
+  .contactPassage{
+    text-align: left;
+    font-size: 17px;
+    font-family: 'noto-sans-kr-light';
+    text-indent: -90px;
+    padding-left: 100px;
+    line-height: 30px;
+  }
+  
+  .contactPassage1{
+    font-size: 19px;
+    font-family: 'noto-sans-kr-medium';
+    padding-bottom: 10px;
+  }
+  
+  .contactPassage2 {
+    padding-bottom: 10px;
+  
+  }
+  
+  .contactPassage3 {
+    padding-bottom: 10px;
+  }
+  
+  .contactPassage4 {
+    padding-bottom: 10px;
+  }
+
+.contactTitleT {
+  text-align: center;
+  font-family: 'noto-sans-kr-light';
+  font-size: 20.8pt;
+  line-height:50px;
+  padding-bottom:136px;
+}
+
+.contactSubTitleT {
+  text-align: center;
+  font-family: 'noto-sans-kr-bold';
+  font-size: 31.2pt;
+}
+
+.contactPassageT {
+  text-align: left;
+  font-size: 18.2pt;
+  font-family: 'noto-sans-kr-light';
+  text-indent: -130px;
+  padding-left: 160px;
+  line-height: 40px;
+}
+
+.contactPassage1T{
+  font-size: 20.8pt;
+  font-family: 'noto-sans-kr-medium';
+  padding-bottom: 10px;
+}
+
+.contactPassage2T {
+  padding-bottom: 10px;
+
+}
+.contactPassage3T {
+  padding-bottom: 10px;
+}
+.contactPassage4T {
+  padding-bottom: 10px;
+}
+
+/* @media (prefers-reduced-motion: no-preference){
+  .contactTitle{
+    animation: contactDescriptionAppear 1.0s ease-out;
+
+  }
+}
+@media (prefers-reduced-motion: no-preference){
+  .contactSubTitle{
+    animation: contactDescriptionAppear 1.0s ease-out;
+
+  }
+}
+@media (prefers-reduced-motion: no-preference){
+  .contactPassage1{
+    animation: contactPassage1Appear 1.5s ease-out;
+
+  }
+}
+
+@media (prefers-reduced-motion: no-preference){
+  .contactPassage2{
+    animation: contactPassage2Appear 1.8s ease-out;
+
+  }
+}
+
+@media (prefers-reduced-motion: no-preference){
+  .contactPassage3{
+    animation: contactPassage3Appear 2.1s ease-out;
+
+  }
+}
+
+@media (prefers-reduced-motion: no-preference){
+  .contactPassage4{
+    animation: contactPassage4Appear 2.4s ease-out;
+
+   }
+  }
+
+  @media (prefers-reduced-motion: no-preference){
+  .hamburgerContact{
+    animation: contactHamburgerAppear 2.9s ease-out;
+  }
+} */
+
+
+@keyframes contactDescriptionAppear {
+  0% { opacity: 0%; }
+  50% {opacity:0%}
+  100% { opacity: 100% }
+}
+
+@keyframes contactPassage1Appear {
+  0% { opacity: 0%; }
+  66% {opacity:0%}
+  100% { opacity: 100% }
+}
+
+@keyframes contactPassage2Appear {
+  0% { opacity: 0%; }
+  83% {opacity:0%}
+  100% { opacity: 100% }
+}
+
+@keyframes contactPassage3Appear {
+  0% { opacity: 0%; }
+  86% {opacity:0%}
+  100% { opacity: 100% }
+}
+
+@keyframes contactPassage4Appear {
+  0% { opacity: 0%; }
+  88% {opacity:0%}
+  100% { opacity: 100% }
+}
+
+
+@keyframes contactHamburgerAppear {
+  0% { opacity: 0%; }
+  83% {opacity:0%}
+  100% { opacity: 100% }
+}

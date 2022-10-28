@@ -1,0 +1,179 @@
+.graphLocation {
+  padding-left: 1%;
+}
+
+.longButton1{
+    padding-right:50px;
+}
+
+.firstRow{
+    font-size: 20px;
+}
+
+.secondRow{
+    font-size: 30px;
+}
+
+.hide.below{
+    display: none;
+}
+
+.below{
+}
+
+.hide.test1{
+  display: none;
+}
+
+.graphArea{
+}
+
+.infoText{
+    text-align: left;
+}
+
+.momentumTitle{
+    font-size: 29px;
+    /* font-size: 31.2px; */
+    text-align: center;
+    font-family: 'noto-sans-kr-bold';
+    position:relative;
+    top:-15px;
+    
+
+}
+
+.indexContainer {
+display: flex;
+flex-direction: row;
+margin: 1.9% 0px 1.9% 0px;
+text-align: center;
+/* font-size: 12.83pt; */
+font-size: 17px;
+font-family: 'noto-sans-kr-regular';
+}
+
+.indexValueContainer {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    font-size: 24px; 
+    font-family: 'noto-sans-kr-regular';
+
+    }
+
+.index {
+    /* background-color: powderblue; */
+    /* border: 1px solid gray; */
+    flex: 1;
+}
+
+.infoText {
+font-size: 17px;
+font-family: 'noto-sans-kr-light';
+line-height: 2;
+padding-left: 3%;
+}
+
+   /* @media (prefers-reduced-motion: no-preference){
+    .graphArea{
+      animation: momentumGraphAppear1 0.07s ease-out;
+    }
+  } */
+
+  @media (prefers-reduced-motion: no-preference){
+    .infoText{
+      animation: momentumInfoAppear1 0.5s ease-out;
+    }
+  }
+
+  @media (prefers-reduced-motion: no-preference){
+    .toContactButton{
+      animation: momentumInfoAppear2 1.0s ease-out;
+    }
+  }
+
+  @media (prefers-reduced-motion: no-preference){
+    .graphArea{
+      animation: momentumGraphAppear1 1.0s ease-out;
+    }
+  }
+
+  @media (prefers-reduced-motion: no-preference){
+    .indexContainer{
+      animation: momentumInfoAppear2 1.5s ease-out;
+    }
+    .indexValueContainer{
+      animation: momentumInfoAppear2 1.5s ease-out;
+    }
+  }
+
+
+  /* @media (prefers-reduced-motion: no-preference){
+    .momentumTitle{
+      animation: momentumGraphAppear4 1.1s ease-out;
+    }
+  } */
+
+  /* @media (prefers-reduced-motion: no-preference){
+    .index{
+      animation: momentumIndexAppear 1.5s ease-out;
+    }
+  }
+
+  @media (prefers-reduced-motion: no-preference){
+    .indexValueContainer{
+      animation: momentumIndex2Appear 1.6s ease-out;
+    }
+  } */
+
+  /* 기간 버튼 눌렀을 때 리프레쉬 */
+  @keyframes momentumGraphAppear1 {
+    0% { opacity: 0%; }
+    30% {opacity:0%}
+    100% { opacity: 100% }
+  }
+
+  @keyframes momentumInfoAppear1 {
+    0% { opacity: 0%; }
+    100% { opacity: 100% }
+  }
+
+  @keyframes momentumInfoAppear2 {
+    0% { opacity: 0%; }
+    50% {opacity:0%}
+    100% { opacity: 100% }
+  }
+
+  @keyframes momentumGraphAppear4 {
+    0% { opacity: 0%; }
+    50% {opacity:0%}
+    100% { opacity: 100% }
+  }
+  
+  @keyframes momentumIndexAppear {
+    0% { opacity: 0%; }
+    66% {opacity:0%}
+    100% { opacity: 100% }
+  }
+
+  @keyframes momentumIndex2Appear {
+    0% { opacity: 0%; }
+    66% {opacity:0%}
+    100% { opacity: 100% }
+  }
+
+/* 전체 페이지 리프레쉬 시 작동 애니메이션 */
+  @keyframes graphTitle {
+    0% { opacity: 0%; }
+    50% {opacity:0%}
+    100% { opacity: 100% }
+  }
+
+
+  /* @keyframes graphLowerButtons {
+    0% { opacity: 0%; }
+    75% {opacity:0%}
+    100% { opacity: 100% }
+  } */
+  
