@@ -73,10 +73,12 @@ const StableOnly = forwardRef((props, ref) => {
         <Button size="left" variant={"default" + (stableUpperButton == "1" ? "Active" : "")} children="Profit" buttonIndex="1" actionName="STABLE_PROFIT" />
        <Button size="right" variant={"default" + (stableUpperButton == "2" ? "Active" : "")} children="Information" buttonIndex="2" actionName="STABLE_INFO" />
        <span className={stableUpperButton == "2" ? 'hide below' : 'below'}>
+       <div className="lowerButtons">
        <Button3 size="left" variant={"default" + (stableLowerButton == "1" ? "Active" : "")} children="ALL" buttonIndex="1" actionName="STABLEALL"/> 
        <Button3 size="middle" variant={"default" + (stableLowerButton == "2" ? "Active" : "")} children="1Y" buttonIndex="2" actionName="STABLE1Y"/> 
        <Button3 size="middle" variant={"default" + (stableLowerButton == "3" ? "Active" : "")} children="6M" buttonIndex="3" actionName="STABLE6M"/> 
        <Button3 size="right" variant={"default" + (stableLowerButton == "4" ? "Active" : "")} children="3M" buttonIndex="4" actionName="STABLE3M"/> 
+       </div>
        <div className={stableUpperButton == "2" ? 'hide graphArea' : 'graphArea'}>
         <StableOnlyGraph />
         </div>
