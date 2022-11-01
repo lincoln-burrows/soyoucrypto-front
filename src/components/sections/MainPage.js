@@ -41,10 +41,10 @@ const MainPage = (props) => {
           </aside>
           <main className='mainpageMain'>
               <div className="navBar">
-                  <span onClick={props.moveToMain} className='navMain'>Main</span>
+                  {/* <span onClick={props.moveToMain} className='navMain'>Main</span>
                   <span onClick={props.moveToMomentum} className='navMomentum'>Momentum Algo.</span>
                   <span onClick={props.moveToStable} className='navStable'>StableOnly</span>
-                  <span onClick={props.moveToContact} className='navContact'>Contact</span>
+                  <span onClick={props.moveToContact} className='navContact'>Contact</span> */}
               </div>
               <div className='mainUpper'>
               <MainPositionBox></MainPositionBox>

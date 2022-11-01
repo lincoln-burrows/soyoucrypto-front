@@ -27,11 +27,11 @@ const Momentum = forwardRef((props, ref) => {
   //   $('#momentumReload').load(window.location.href+'#momentumReload');
   //   console.log("리로드 됨?");
   // }
-  let navAnchor = window.innerHeight;
-  if (navAnchor <= 640){
-    navAnchor = -70;
+  let navAnchor = window.innerHeight-74.5;
+  if (navAnchor <= 600){
+    navAnchor = -70-74.5;
   } else {
-    navAnchor = -1*((navAnchor)-570)/2;
+    navAnchor = -(1*((navAnchor)-570)/2)-74.5;
   }
 
   const modalNavigate = (funcName) =>{

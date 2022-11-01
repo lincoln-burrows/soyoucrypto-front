@@ -11,12 +11,12 @@ import styled from 'styled-components'
 const Contact = forwardRef((props, ref) => {
     const dispatch = useDispatch();
 
-    let navAnchor = window.innerHeight;
-    if (navAnchor <= 640){
-      navAnchor = -70;
-    } else {
-      navAnchor = -1*((navAnchor)-570)/2;
-    }
+    let navAnchor = window.innerHeight-74.5;
+  if (navAnchor <= 600){
+    navAnchor = -70-74.5;
+  } else {
+    navAnchor = -(1*((navAnchor)-570)/2)-74.5;
+  }
 
     const NavBlank = styled.div`
     height : 1px;

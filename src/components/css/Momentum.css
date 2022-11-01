@@ -94,6 +94,12 @@ padding-left: 3%;
   }
 
   @media (prefers-reduced-motion: no-preference){
+    .lowerButtons{
+      animation: momentumLowerButtons 0.5s ease-out;
+    }
+  }
+
+  @media (prefers-reduced-motion: no-preference){
     .graphArea{
       animation: momentumGraphAppear1 1.0s ease-out;
     }
@@ -128,9 +134,14 @@ padding-left: 3%;
   } */
 
   /* 기간 버튼 눌렀을 때 리프레쉬 */
+  @keyframes momentumLowerButtons {
+    0% { opacity: 0%; }
+    100% { opacity: 100% }
+  }
+
   @keyframes momentumGraphAppear1 {
     0% { opacity: 0%; }
-    30% {opacity:0%}
+    50% {opacity:0%}
     100% { opacity: 100% }
   }
 
@@ -141,27 +152,11 @@ padding-left: 3%;
 
   @keyframes momentumInfoAppear2 {
     0% { opacity: 0%; }
-    50% {opacity:0%}
-    100% { opacity: 100% }
-  }
-
-  @keyframes momentumGraphAppear4 {
-    0% { opacity: 0%; }
-    50% {opacity:0%}
-    100% { opacity: 100% }
-  }
-  
-  @keyframes momentumIndexAppear {
-    0% { opacity: 0%; }
     66% {opacity:0%}
     100% { opacity: 100% }
   }
 
-  @keyframes momentumIndex2Appear {
-    0% { opacity: 0%; }
-    66% {opacity:0%}
-    100% { opacity: 100% }
-  }
+ 
 
 /* 전체 페이지 리프레쉬 시 작동 애니메이션 */
   @keyframes graphTitle {
