@@ -39,7 +39,7 @@ const StableOnly = forwardRef((props, ref) => {
     }
 
     useEffect(() => {
-      dispatch(stableAction.getStableGraph("STABLE3M"));
+      dispatch(stableAction.getStableGraph("STABLEALL"));
     }, []);
 
     // useEffect(() => {
