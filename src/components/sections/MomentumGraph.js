@@ -94,6 +94,7 @@ class MomentumGraph extends Component {
         textStyle: {
           fontSize: 14
         },
+      
         itemStyle: {
           borderType:"solid",
         }
