@@ -63,9 +63,9 @@ class StableOnlyGraph extends Component {
           label: {
             // (params.seriesData.length
             formatter: function (params) {
-              console.log("요기가 에러야 stable", params.seriesData)
+              console.log("요기가 에러야 stable", params.seriesData.data)
               return (
-                (params.seriesData[0].data[0] ? params.seriesData[0].data[0].toISOString().split("T")[0] :  Math.round(params.value*10000)/100 +' %')
+                (params.seriesData[0].data.length ? params.seriesData[0].data[0].toISOString().split("T")[0] :  Math.round(params.value*10000)/100 +' %')
               )
             }
             }
