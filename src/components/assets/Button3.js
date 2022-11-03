@@ -54,12 +54,10 @@ function Button3({ disabled, size, variant, children, actionName, graphReload })
       sizeStyle={sizeStyle}
       variantStyle={variantStyle}
       onClick={()=>{
-        // dispatch({type:"INITIALIZE_MOMENTUM_DATA"})
         dispatch({type:actionName});
         {actionName.includes("MOMENTUM") ? 
         dispatch(momentumAction.getMomentumGraph(actionName))
         : dispatch(stableAction.getStableGraph(actionName))}
-        graphReload();
     }}
     >
       {children}

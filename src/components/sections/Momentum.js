@@ -22,11 +22,7 @@ const Momentum = forwardRef((props, ref) => {
   const dispatch = useDispatch();
   const { momentumLowerButton, momentumUpperButton, momentumAnimationConst } = useSelector((state) => state.legacy);
   const { momentumData, momentumIndex } = useSelector((state) => state.momentumData);
-  // const momentumIndex = JSON.parse(localStorage.getItem("momentumIndex")) || [];
-  // const graphReload = () => {
-  //   $('#momentumReload').load(window.location.href+'#momentumReload');
-  //   console.log("리로드 됨?");
-  // }
+
   let navAnchor = window.innerHeight-74.5;
   if (navAnchor <= 600){
     navAnchor = -70-74.5;
@@ -110,7 +106,6 @@ const Momentum = forwardRef((props, ref) => {
         </div>
         </div>
         </span>
-        {/* <button onClick={graphReload}>zz</button> */}
         <div className={momentumUpperButton == "1" ? 'hide below' : 'below'}>
 
               <br></br><br></br><br></br><br></br>
