@@ -15,9 +15,9 @@ function getMomentumGraph(type){
                 momentumIndex : momentumIndex.data, 
             },
         })
-        localStorage.setItem("momentumData", JSON.stringify(momentumData.data))
-        localStorage.setItem("momentumIndex", JSON.stringify(momentumIndex.data))
-        console.log("우리가 promiseAll 후에 받는 데이터는?", momentumIndex)
+        // localStorage.setItem("momentumData", JSON.stringify(momentumData.data))
+        // localStorage.setItem("momentumIndex", JSON.stringify(momentumIndex.data))
+        // console.log("우리가 promiseAll 후에 받는 데이터는?", momentumIndex)
     };
     
 }
