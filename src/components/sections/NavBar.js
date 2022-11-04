@@ -18,7 +18,7 @@ import styled from 'styled-components'
 import $ from 'jquery';
 
 const NavBar = forwardRef((props, ref) => {
-
+  const dispatch = useDispatch();
 
   return (
     <div className="containerHG">
@@ -31,12 +31,11 @@ const NavBar = forwardRef((props, ref) => {
           <main>
           <div className="navBar">
  
-                  {/* <span className="navBlankRight"></span> */}
-                  <span onClick={props.moveToMain} className='navMain'>Main</span>
-                  <span onClick={props.moveToMomentum} className='navMomentum'>Momentum Algo.</span>
+                  <span onClick={()=> {props.moveToMain(); }} className='navMain'>Main</span>
+                  {/* <span onClick={()=> {props.moveToMomentum(); dispatch({type:"MOMENTUM_NAV_ANI_ON"});}} className='navMomentum'>Momentum Algo.</span> */}
+                  <span onClick={()=> {props.moveToMomentum(); }} className='navMomentum'>Momentum Algo.</span>
                   <span onClick={props.moveToStable} className='navStable'>StableOnly</span>
                   <span onClick={props.moveToContact} className='navContact'>Contact</span>
-                  {/* <span className="navBlankLeft"></span> */}
 
               </div>
           </main>

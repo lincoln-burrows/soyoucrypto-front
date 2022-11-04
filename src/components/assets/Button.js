@@ -50,7 +50,13 @@ const Button = (props) => {
       disabled={disabled}
       sizeStyle={sizeStyle}
       variantStyle={variantStyle}
-      onClick={()=>{dispatch({type:actionName}); }}
+      onClick={()=>{
+        dispatch({type:actionName}); 
+        {actionName.includes("INFO") ? 
+        dispatch({type:"MOMENTUM_NAV_ANI_OFF"})
+        :dispatch() }
+      }}
+      
     >
       {props.children}
     </StyledButton>
