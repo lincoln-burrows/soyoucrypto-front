@@ -70,7 +70,7 @@ const StableOnly = forwardRef((props, ref) => {
           <main>
           <NavBlank ref={ref}></NavBlank>
             <div className="momentumTitle">Stablecoin Only</div>
-        <Button size="left" variant={"default" + (stableUpperButton == "1" ? "Active" : "")} children="Profit" buttonIndex="1" actionName="STABLE_PROFIT" />
+        <Button size="left" variant={"default" + (stableUpperButton == "1" ? "Active" : "")} children="Return" buttonIndex="1" actionName="STABLE_PROFIT" />
        <Button size="right" variant={"default" + (stableUpperButton == "2" ? "Active" : "")} children="Information" buttonIndex="2" actionName="STABLE_INFO" />
        <span className={stableUpperButton == "2" ? 'hide below' : 'below'}>
        <div className="lowerButtons">

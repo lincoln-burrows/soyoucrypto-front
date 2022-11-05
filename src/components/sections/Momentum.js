@@ -97,7 +97,7 @@ const Momentum = forwardRef((props, ref) => {
             {/* </Wrapper>     */}
             <div className="upperButtons" >
         
-        <Button size="left" variant={"default" + (momentumUpperButton == "1" ? "Active" : "")} children="Profit" buttonIndex="1" actionName="MOMENTUM_PROFIT" />
+        <Button size="left" variant={"default" + (momentumUpperButton == "1" ? "Active" : "")} children="Return" buttonIndex="1" actionName="MOMENTUM_PROFIT" />
        <Button size="right" variant={"default" + (momentumUpperButton == "2" ? "Active" : "")} children="Information" buttonIndex="2" actionName="MOMENTUM_INFO" />
        
        </div>
