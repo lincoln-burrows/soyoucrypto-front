@@ -48,7 +48,7 @@ const MainPage = (props) => {
               </div>
               <div className='mainUpper'>
               <MainPositionBox></MainPositionBox>
-          <div className="mainTitle">SOYOU CRYPTO1</div>
+          <div className="mainTitle">SOYOU CRYPTO</div>
           <h4 className="mainSubTitleMobile">Crypto Asset<br></br>Management Labs</h4>
           <h4 className="mainSubTitleWeb">Crypto Asset Management Labs</h4>
           </div>
