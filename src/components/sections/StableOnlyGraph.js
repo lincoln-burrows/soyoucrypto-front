@@ -45,6 +45,7 @@ class StableOnlyGraph extends Component {
         value,
       ]);
     }
+
     return res;
   };
 
@@ -70,8 +71,8 @@ class StableOnlyGraph extends Component {
               // }
 
               if (
-                params.seriesData[0]?.data[0] !== undefined &&
-                params.seriesData.length
+                params?.seriesData[0]?.data[0] !== undefined &&
+                params?.seriesData.length > 0
               ) {
                 return params.seriesData[0]?.data[0]
                   ?.toISOString()
@@ -157,6 +158,8 @@ class StableOnlyGraph extends Component {
             width: "97%",
           }}
           option={data}
+          lazyUpdate
+          notMerge
         />
       </div>
     );
