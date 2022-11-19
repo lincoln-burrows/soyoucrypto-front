@@ -16,31 +16,14 @@ class MomentumGraph extends Component {
     super(props);
     
     this.state = {
-      // data2: {},
     };
   }
-
-  // extractDataToList = (arg, data) => {
-  //   const res = [];
-  //   for (let i in data) {
-  //     let item = data[i][arg];
-  //     if (arg === "time") {
-  //       let i =
-  //         "'" + item.toString().slice(2, 10);
-  //       res.push(i);
-  //     } else {
-  //       res.push(parseFloat(data[i][arg]));
-  //     }
-  //   }
-  //   return res;
-  // };
   
   extractDataToList = (arg, data) => {
     const res = [];
-    console.log("???", data)
+    
     for (let i in data) {
       let time = data[i].time.toString().replace(/-/g,'');
-      // let time = data[i].time.replace(/-/g,'');
       if (arg==="cum_return_ma") {
       let value = data[i].cum_return_ma;
         res.push([new Date(time.slice(0,4), time.slice(4,6)-1, time.slice(6,8)), value]);
@@ -61,17 +44,8 @@ class MomentumGraph extends Component {
 
   render() {
     const { momentumData } = this.props.momentumData;
-    // const momentumData = JSON.parse(localStorage.getItem("momentumData")) || [];
-    // let splitNum = 0;
-    // if(dataSize<120){
-    //   splitNum=3;
-    // } else {
-    //   splitNum = 5;
-    // }
-    console.log("??2",momentumData)
     const momentum_algo = this.extractDataToList("cum_return_ma", momentumData);
     const btc_usdt = this.extractDataToList("cum_return_btc", momentumData);
-    // var duration = 1500;
     const data = {
       tooltip: {
         trigger: "axis",
@@ -79,15 +53,17 @@ class MomentumGraph extends Component {
           type: "cross",
           label: {
             formatter: function (params) {
-              // console.log("요기가 에러야 momentum", params.seriesData.length)
-              // return (
-              //   (params.seriesData && params.seriesData.length ? params.seriesData[0].data[0].toISOString().split("T")[0] :  Math.round(params.value*10000)/100 +' %')
-                
-              // )
-              return (
-                (  params.seriesData && params.seriesData.length > 0
-                  ? params.seriesData[0]?.data[0]?.toISOString().split("T")[0] :  Math.round(params.value*10000)/100 +' %')
-              )
+
+              if (
+                params?.seriesData[0]?.data[0] !== undefined &&
+                params?.seriesData.length > 0
+              ) {
+                return params.seriesData[0]?.data[0]
+                  ?.toISOString()
+                  .split("T")[0];
+              } else {
+                return Math.round(params.value * 10000) / 100 + " %";
+              }
             }
             }
           }
@@ -113,34 +89,18 @@ class MomentumGraph extends Component {
       xAxis: {
         type: "time",
         show: true,
-        // axisLine:false,
         axisLine: {
           onZero: false,
           lineStyle: {
             color: "#6E7078"
           }
         },
-        // splitNumber: value => (momentumData.length >120 ? 5 : 1),
         splitNumber: 5,
-          // console.log("포맷밸류",value)
-          
-        
-        // maxInterval:100,
-        // splitNumber: function (params) {
-        //   console.log("splitParam", params)
-        //   return (
-        //     (params.seriesData.length ? )
-        //   )
-        // },
         axisLabel: {
           color: "#9396a4",
           fontSize:16,
           rotate: 0,
           interval: 200,
-          // formatter: function (value, index) {
-          //   console.log("포맷밸류",value)
-          //   console.log("포맷인덱스",index)
-          // }
         }
       },
       yAxis: {
@@ -167,17 +127,7 @@ class MomentumGraph extends Component {
           tooltip: {
             valueFormatter: value => Math.round(value*10000)/100 +' %'
           },
-        //   animationEasing: 'linear',
-        //   animationEasingUpdate: 'linear',
-        //   animationDelay: function (i) {
-        //     if (i == null) {
-        //         return null;
-        //     }
-        //     else {
-        //         // cubicIn is x=t^3 so t=x^(1/3)
-        //         return (Math.pow((i + 0.5) / data.length, 1 / 3)) * duration;
-        //     }
-        // }
+
         },
         {
           name: "BTC_USDT Hodl",
@@ -192,23 +142,9 @@ class MomentumGraph extends Component {
           tooltip: {
             valueFormatter: value => Math.round(value*10000)/100 +' %'
           },
-        //   animationEasing: 'linear',
-        //   animationEasingUpdate: 'linear',
-        //   animationDelay: function (i) {
-        //     if (i == null) {
-        //         return null;
-        //     }
-        //     else {
-        //         // cubicIn is x=t^3 so t=x^(1/3)
-        //         return (Math.pow((i + 0.5) / data.length, 1 / 3)) * duration;
-        //     }
-        // },
-        // animationDelayUpdate: 1000,
         },
         
       ],
-      // animationDuration: duration,
-      // animationDurationUpdate: 250,
     };
     return (
       

@@ -23,14 +23,6 @@ function App() {
   
   const areaRef = useRef(null);
 
-  // const handleScrollAnimation = () => {
-  //   const elementTop = areaRef?.current?.getBoundingClientRect().top;
-  //   const elementBottom = areaRef?.current?.getBoundingClientRect().bottom;
-  //   if (elementBottom > 0 && elementTop <= window.innerHeight && momentumAnimation) {
-  //     dispatch({type:"MOMENTUM_ANIMATION_ON"})
-  //   }
-  // };
-
 
   const moveToMain = () => {
     refMain.current?.scrollIntoView({behavior: 'smooth'});
@@ -38,7 +30,6 @@ function App() {
 
   const moveToMomentum = () => {
     refMomentum.current?.scrollIntoView({behavior: 'smooth'});
-    console.log("얘네 원리가?", refMomentum.current)
   };
 
   const moveToStable = () => {
@@ -49,18 +40,6 @@ function App() {
     refContact.current?.scrollIntoView({behavior: 'smooth'});
   };
 
-
-  // useEffect(() => {
-  //   window.addEventListener('scroll', (e) => {
-  //     handleScrollAnimation(e);
-  //   });
-
-  //   return () => {
-  //     window.removeEventListener('scroll', (e) => {
-  //       handleScrollAnimation(e);
-  //     });
-  //   };
-  // }, []);
 
   return (
     <div>

@@ -11,7 +11,6 @@ import App from "../../App";
 import MomentumGraph from "./MomentumGraph";
 import { useState } from 'react'
 import { useDispatch, useSelector } from "react-redux";
-import ToggleMenu from "../assets/ToggleMenu";
 import InfoRFSButton from "../assets/InfoRFSButton";
 import { momentumAction } from "../../redux/actions/momentumAction";
 import styled from 'styled-components'
@@ -32,7 +31,6 @@ const NavBar = forwardRef((props, ref) => {
           <div className="navBar">
  
                   <span onClick={()=> {props.moveToMain(); }} className='navMain'>Main</span>
-                  {/* <span onClick={()=> {props.moveToMomentum(); dispatch({type:"MOMENTUM_NAV_ANI_ON"});}} className='navMomentum'>Momentum Algo.</span> */}
                   <span onClick={()=> {props.moveToMomentum(); }} className='navMomentum'>Momentum Algo.</span>
                   <span onClick={props.moveToStable} className='navStable'>StableOnly</span>
                   <span onClick={props.moveToContact} className='navContact'>Contact</span>
