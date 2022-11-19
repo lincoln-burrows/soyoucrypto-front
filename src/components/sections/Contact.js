@@ -25,7 +25,6 @@ const Contact = forwardRef((props, ref) => {
     top: ${navAnchor}px;
     `;
 
-    // if(props.scrollIndex == 4){
     return (
         <div className="containerHG">
       <header >
@@ -61,45 +60,6 @@ const Contact = forwardRef((props, ref) => {
       </footer>
     </div>
     );
-// } else {
-//     return (
-//         <div className="containerHG">
-//       <header >
-//       <img width="45.5" height="35.5" className="upwardArrow" src={upwardArrow} onClick={()=>{props.pageUp(1);}}></img>
-//       </header>
-//       <section className="content">
-//           <nav>
-            
-//           </nav>
-//           <aside>
-//           </aside>
-//           <main>
-//               <div className='contactTitleT'>
-//           <div>Requests for Service</div>
-//                         <div className='contactSubTitleT'>soyou_crypto@gmail.com</div>
-//                         </div>
-                        
-//                         <div className='contactPassageT'>
-//                         <div className="contactPassage1T">[ Track Record ]</div>
-//                         <div className="contactPassage2T">&bull; &nbsp;&nbsp;&nbsp;&nbsp;May '22 : Selected for angel package by Seoul Center for Creative Economy & Innovation</div>
-//                         <div className="contactPassage3T">&bull; &nbsp;&nbsp;&nbsp;&nbsp;Oct '22 : Momentum algorithm ver1.0 launched</div>
-//                         <div className="contactPassage4T">&bull; &nbsp;&nbsp;&nbsp;&nbsp;Oct '22 : Stable only ver1.0 launched</div>
-//                         </div>
-//           </main>
-//           <aside>
-//           <img width="100" height="100" src={hamburger} onClick={()=>dispatch({type:"SET_MODAL_ON"})}/>
-//           <ToggleModal modalNavStep1={modalNavStep1}/>
-//           </aside>
-//           <nav>
-            
-//           </nav>
-//       </section>
-//       <footer>
-//       </footer>
-//     </div>
-        
-//     );
-// }
 }
 )
 export default Contact;

@@ -1,6 +1,4 @@
 const initialState = {
-  // isModalOn: false,
-  // isOpen: false,
   momentumAnimation:false,
   momentumNavAnimation:false,
   momentumUpperButton:"1",
@@ -13,16 +11,7 @@ const initialState = {
 };
 
 const legacyReducer = (state = initialState, action) => {
-    console.log("action은 뭘까?", action);
-  switch (action.type) {
-    // case "SET_MODAL_OFF":
-    //   return { ...state, isModalOn: false };
-    // case "SET_MODAL_ON":
-    //   return { ...state, isModalOn: true, isOpen: true };
-    // case "SET_ISOPEN_TRUE":
-    //   return { ...state, isOpen: true };       
-    // case "SET_ISOPEN_FALSE":
-    //   return { ...state, isOpen: false };       
+  switch (action.type) {    
     case "MOMENTUM_ANIMATION_ON":
       return { ...state, momentumAnimation: true };
     case "MOMENTUM_ANIMATION_OFF":
@@ -59,10 +48,6 @@ const legacyReducer = (state = initialState, action) => {
       return { ...state, stableLowerButton: "3" };
     case "STABLE3M":
       return { ...state, stableLowerButton: "4" };
-    // case "STABLEANICONSTRESET":
-    //     return { ...state, stableAnimationConst: "1" };
-    // case "STABLEANICONSTSTOP":
-    //     return { ...state, stableAnimationConst: "2" };     
     default:
       return {...state};
   }

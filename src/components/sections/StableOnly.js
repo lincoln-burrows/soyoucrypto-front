@@ -11,7 +11,6 @@ import App from "../../App";
 import StableOnlyGraph from "./StableOnlyGraph";
 import { useState } from 'react'
 import { useDispatch, useSelector } from "react-redux";
-import ToggleMenu from "../assets/ToggleMenu";
 import InfoRFSButton from "../assets/InfoRFSButton";
 import { stableAction } from "../../redux/actions/stableAction";
 import styled from 'styled-components'
@@ -22,7 +21,6 @@ const StableOnly = forwardRef((props, ref) => {
   const dispatch = useDispatch();
   const { stableLowerButton, stableUpperButton } = useSelector((state) => state.legacy);
   const { stableData, stableIndex } = useSelector((state) => state.stableData);
-  console.log("stableIndex?", stableIndex)
   
   let navAnchor = window.innerHeight-74.5;
   if (navAnchor <= 600){
@@ -41,13 +39,6 @@ const StableOnly = forwardRef((props, ref) => {
     useEffect(() => {
       dispatch(stableAction.getStableGraph("STABLEALL"));
     }, []);
-
-    // useEffect(() => {
-    //   window.addEventListener('resize', handleResize);
-    //   return () => {
-    //     window.removeEventListener('resize', handleResize);
-    //   }
-    // }, []);
     
     const NavBlank = styled.div`
   height : 1px;

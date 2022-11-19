@@ -15,7 +15,6 @@ function getStableGraph(type){
                 stableIndex : stableIndex.data, 
             }
         })
-        console.log("우리가 promiseAll 후에 받는 데이터는?", stableIndex)
     };
     
 }

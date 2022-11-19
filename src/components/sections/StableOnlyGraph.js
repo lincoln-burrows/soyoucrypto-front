@@ -15,28 +15,12 @@ class StableOnlyGraph extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      // data2: {},
     };
   }
 
-  // extractDataToList = (arg, data) => {
-  //   const res = [];
-  //   for (let i in data) {
-  //     let item = data[i][arg];
-  //     if (arg === "datetime") {
-  //       let i =
-  //         "'" + item.toString().slice(2, 10);
-  //       res.push(i);
-  //     } else {
-  //       res.push(parseFloat(data[i][arg]));
-  //     }
-  //   }
-  //   return res;
-  // };
-
   extractDataToList = (data) => {
     const res = [];
-    console.log("???Stable", data);
+    
     for (let i in data) {
       let time = data[i].datetime.toString().replace(/-/g, "");
       let value = data[i].cum_return_ma;
@@ -55,7 +39,6 @@ class StableOnlyGraph extends Component {
 
   render() {
     const { stableData } = this.props.stableData;
-    // const dates = this.extractDataToList("datetime", stableData);
     const stableOnly = this.extractDataToList(stableData);
 
     const data = {
@@ -64,11 +47,7 @@ class StableOnlyGraph extends Component {
         axisPointer: {
           type: "cross",
           label: {
-            // (params.seriesData.length
             formatter: function (params) {
-              // if (params.seriesData.length) {
-              //   // console.log("요기가 에러야 stable", params.seriesData[0].data[0].toISOString().split("T")[0])
-              // }
 
               if (
                 params?.seriesData[0]?.data[0] !== undefined &&
@@ -80,10 +59,6 @@ class StableOnlyGraph extends Component {
               } else {
                 return Math.round(params.value * 10000) / 100 + " %";
               }
-
-              // return params.seriesData && params.seriesData.length > 0
-              //   ? params.seriesData[0]?.data[0]?.toISOString().split("T")[0]
-              //   : Math.round(params.value * 10000) / 100 + " %";
             },
           },
         },
@@ -129,6 +104,7 @@ class StableOnlyGraph extends Component {
           formatter: (value) => value * 100 + " %",
         },
       },
+      notMerge:true,
       series: [
         {
           name: "Stable Only",
@@ -152,14 +128,11 @@ class StableOnlyGraph extends Component {
         <ReactEcharts
           style={{
             height: "300px",
-            // height: "369px",
-            // 369
-            // width: "100%"
             width: "97%",
           }}
           option={data}
-          lazyUpdate
-          notMerge
+          notMerge={true}
+          lazyUpdate={true}
         />
       </div>
     );
