@@ -11,7 +11,6 @@ import App from "../../App";
 import MomentumGraph from "./MomentumGraph";
 import { useState } from 'react'
 import { useDispatch, useSelector, } from "react-redux";
-import ToggleMenu from "../assets/ToggleMenu";
 import InfoRFSButton from "../assets/InfoRFSButton";
 import { momentumAction } from "../../redux/actions/momentumAction";
 import styled, { keyframes } from 'styled-components'
@@ -24,20 +23,6 @@ const Momentum = forwardRef((props, ref) => {
   const momentumNavAnimation  = useSelector((state) => state.legacy);
   const momentumAnimation  = useSelector((state) => state.legacy.momentumAnimation);
   const { momentumData, momentumIndex } = useSelector((state) => state.momentumData);
-
-
-// // nav 클릭 시 애니메이션
-// const Wrapper = styled.div`
-
-//   animation: ${({ animation }) => animation && goup} 2s ease-out forwards;
-//   font-weight: bold;
-//   font-size: 2rem;
-// `;
-
-// const goup = keyframes`
-//   from { transform: translateY(5rem); opacity: 0; }
-//   to { transform: translateY(0); opacity: 1; }
-// `;
 
 
   let navAnchor = window.innerHeight-74.5;
@@ -57,9 +42,6 @@ const Momentum = forwardRef((props, ref) => {
       dispatch(momentumAction.getMomentumGraph("MOMENTUMALL"));
     }, []);
 
-    // useEffect(() => {
-    //   dispatch({type:"MOMENTUM_NAV_ANI_OFF"});
-    // }, [momentumLowerButton, momentumUpperButton]);
 
     const NavBlank = styled.div`
     height : 1px;
@@ -68,19 +50,9 @@ const Momentum = forwardRef((props, ref) => {
     top: ${navAnchor}px;
     `;
 
-    // useEffect(() => {
-      
-    // }, [momentumLowerButton]);
-
-    // if(props.scrollIndex == "2" && momentumAnimationConst == 1){
-    //   dispatch({type:"MOMENTUMANICONSTINACTIVE"}); 
-    // console.log("inactive로 변경")
-    // if(props.scrollIndex == "2" ){
-    //    console.log("inactive로 변경")
   return (
     <div className="containerHG">
       <header >
-      {/* <img width="45.5" height="35.5" className="upwardArrow" src={upwardArrow} onClick={()=>{props.pageUp(1);}}></img> */}
       </header>
       <section className="content">
           <nav>
@@ -91,10 +63,8 @@ const Momentum = forwardRef((props, ref) => {
           <main>
           <NavBlank ref={ref.refMomentum}></NavBlank>
           <div ref={ref.areaRef} ></div>
-          
-          {/* <Wrapper animation={momentumNavAnimation}> */}
+           
             <div className="momentumTitle"> Momentum Algorithm</div>
-            {/* </Wrapper>     */}
             <div className="upperButtons" >
         
         <Button size="left" variant={"default" + (momentumUpperButton == "1" ? "Active" : "")} children="Return" buttonIndex="1" actionName="MOMENTUM_PROFIT" />
