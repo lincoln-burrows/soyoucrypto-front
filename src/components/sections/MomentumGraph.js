@@ -53,13 +53,6 @@ class MomentumGraph extends Component {
           type: "cross",
           label: {
             formatter: function (params) {
-<<<<<<< HEAD
-              // console.log("요기가 에러야 momentum", params.seriesData.length)
-              return (
-                (params.seriesData && params.seriesData.length ? params.seriesData[0].data[0].toISOString().split("T")[0] :  Math.round(params.value*10000)/100 +' %')
-                
-              )
-=======
 
               if (
                 params?.seriesData[0]?.data[0] !== undefined &&
@@ -71,7 +64,6 @@ class MomentumGraph extends Component {
               } else {
                 return Math.round(params.value * 10000) / 100 + " %";
               }
->>>>>>> 3556a3c66097d4e79a21ee50ca3165c7cec36f0c
             }
             }
           }
