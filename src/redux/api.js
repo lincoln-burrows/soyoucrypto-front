@@ -1,8 +1,8 @@
 import axios from "axios";
 
 const api = axios.create({
-    baseURL:"https://kagomepizza-ragtime.shop",
-    // baseURL:"http://localhost:8080",
+    // baseURL:"https://kagomepizza-ragtime.shop",
+    baseURL:"https://soyoucryptoweb.shop/Api",
     headers:{"Content-Type":"application/json"}
 })
 

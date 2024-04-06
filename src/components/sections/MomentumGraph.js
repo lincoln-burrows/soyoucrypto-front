@@ -152,10 +152,7 @@ class MomentumGraph extends Component {
         <ReactEcharts 
           style={{
             height: "300px",
-            // height: "369px",
-            // 369
             width: "97%",
-            // width: "900px"
           }}
           option={data} 
           notMerge={true}

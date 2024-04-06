@@ -1,11 +1,5 @@
 
 
-/* 화면에서 스크롤바 안보이게 */
-/* .outer::-webkit-scrollbar {
-  display: none;
-} */
-
-
 .divider {
   width: 100%;
   height: 5px;
